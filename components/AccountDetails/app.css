@@ -1,0 +1,273 @@
+.account-details-section {
+    background-color: #F5F6FA;
+    /* height: auto; */
+    padding-bottom: 90px;
+    padding-top: 20px;
+}
+
+.account-details-main{
+    width: 95%;
+    margin-top: 35px;
+}
+
+.account-details-heading{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+}
+
+.account-details-heading p{
+    font-size: 14px;
+}
+
+.back-btn {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 15px 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+.back-btn img {
+    margin-right: 9px;
+    width: 20px;
+    margin-top: 4px;    
+}
+
+
+.account-content-heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.account-content-heading p{
+    font-size: 14px;
+}
+
+
+.edit-btn{
+    background-color: white;
+    border: 1px solid #346EFF;
+    padding: 5px 15px 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    color: #346EFF;
+    cursor: pointer;
+}
+
+.edit-btn img {
+    margin-right: 9px;
+    width: 20px;
+    margin-top: 4px;    
+}
+
+.tab-main-div{
+    margin: 0 auto;
+    margin-left: 25px;
+    justify-content: space-between;
+    /* padding-left: 40px; */
+    background-color: white;
+    /* height: 80%; */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+}
+
+.account-tabs {
+    display: flex;
+    width: 80%;
+    margin-top: 30px;
+    background: white;
+    border-radius: 10px;
+}
+
+.account-tabs div{
+      width: 100%;
+      display: flex;
+      padding: 5px 10px
+}
+
+.tab-of-account {
+    flex: 1;
+    text-align: center;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+  .tab-of-account.account-active {
+    background-color: white;
+    color: #346EFF;
+    width: 20%;
+  }
+
+  .account-tabs div p{
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+
+  .trade-icon{
+    width: 27px;
+    height: 26px;
+    margin-top: 5px;
+  }
+
+  .account-content{
+    padding: 50px 35px 270px 0px;
+    background-color: white;
+  }
+ 
+
+  .left-content{
+    width: 40%;
+    float: left;
+  }
+
+.left-content div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.left-content div p{
+    font-size: 15px;
+}
+
+.address{
+    width: 100%;
+    padding: 0;
+}
+
+.right-content{
+    width: 50%;
+    float: right;
+  }
+
+.right-content div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.right-content div p {
+    font-size: 15px;
+}
+
+.connect-for-trading-inner div{
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 32px;
+        margin-top: 40px;
+        margin-bottom: 68px;
+        align-items: center;
+}
+
+.connect-for-kycDoc-inner{
+    padding-top: 40px;
+}
+
+.connect-for-kycDoc-inner > div{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+.connect-for-kycDoc-inner div span{
+    color: #01BF87;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 786px) {
+    .account-tabs {
+        display: block;
+        width: 80%;
+        margin-top: 30px;
+        background: white;
+        border-radius: 10px;
+    }
+
+    .tab-of-account.account-active {
+        background-color: white;
+        color: #346EFF;
+        width: auto;
+    }
+
+    .left-content {
+        width: auto;
+        /* float: left; */
+    }
+
+    .right-content {
+        width: 100%;
+        /* float: right; */
+    }
+
+    .account-content {
+        padding: 50px 35px 400px 0px;
+        background-color: white;
+    }
+
+    .connect-for-trading-inner div {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 32px;
+        margin-top: 40px;
+        margin-bottom: 68px;
+        align-items: center;
+    }
+
+    .connect-for-kycDoc-inner > div {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 32px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 786px) {
+    .account-tabs {
+        display: flex;
+        width: auto;
+        margin-top: 30px;
+        background: white;
+        border-radius: 10px;
+    }
+
+    .address {
+        width: 115%;
+        padding: 0;
+    }
+
+    .connect-for-kycDoc-inner > div {
+        width: 45%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 32px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .account-tabs {
+        display: flex;
+        width: 82%;
+        margin-top: 30px;
+        background: white;
+        border-radius: 10px;
+    }
+}
+
+.account-details-section {
+    background-color: #F5F6FA;
+    padding-bottom: 90px;
+    padding-top: 20px;
+    height: 135vh;
+}
