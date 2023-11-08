@@ -1,0 +1,30 @@
+.tutorial-section{
+    width: 100%;
+    float: left;
+    /* padding: 40px 20px; */
+    background-color: #F5F6FA;
+}
+
+.tutorial-main{
+    /* width: 85%; */
+    margin: 0 auto;
+    padding: 20px 80px;
+}
+
+.tutotial-content{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 8px 2px 13px #b4b0b0;
+    padding: 30px 30px;
+    border-radius: 10px;
+}
+
+.tutotial-content h3{
+    margin-bottom: 20px;
+}
+
+.tutotial-content img{
+    width: 100%;
+    margin-top: 25px;
+}

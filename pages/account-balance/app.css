@@ -1,0 +1,65 @@
+
+.balance-details{
+    width: auto;
+    background-color: white;
+    padding: 30px 30px;
+    border-radius: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.balance-details div{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .balance-details div{
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-top: 20px;
+    }
+    
+}
+
+.balance-details > button{
+    background-color: #B7FFEA;
+    color: #01BF87;
+    border: 1px solid #01BF87;
+    cursor: pointer;
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.balance-details > input:hover{
+    background-color: #d7f8ee;
+}
+
+.edit-btn{
+    border: none;
+}
+
+.edit-btn button{
+    border: 1px solid #346EFF;
+    color: #346EFF;
+    background-color: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.edit-btn img{
+    margin-right: 0px;
+    margin-top: -2px;
+}

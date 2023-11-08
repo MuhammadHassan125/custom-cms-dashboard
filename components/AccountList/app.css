@@ -28,8 +28,16 @@
 .account-list-content{
     background-color: white;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding-bottom: 160px;
+    position: relative;
 }
 
+.pagination{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 25px;
+    margin-left: 20px;
+}
 .account-top-bar{
     display: flex;
     justify-content: space-between;
@@ -324,10 +332,15 @@
   .modal-heading{
     display: flex;
     justify-content: space-between;
+    padding: 50px 30px;
   }
 
   .modal-heading h2{
     margin-top: -10px;
+  }
+
+  .modal-close{
+    cursor: pointer;
   }
 
 
@@ -355,9 +368,9 @@
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 35px;
     border-radius: 10px;
-  }
+}
   
   .tab-progress {
     display: flex;

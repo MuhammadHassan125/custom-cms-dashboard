@@ -2,13 +2,22 @@ import React, { useState } from 'react'
 import "../AccountList/app.css";
 import { AiOutlinePlus } from "react-icons/ai";
 import CreateAccount from './CreateAccount';
-import { Link } from 'react-router-dom';
+import { Dialog, Pagination } from '@mui/material';
 
 const AccountList = () => {
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isFilter, setIsFilter] = useState(false);
   const [isActive, setIsActive] = useState(false);
+  const [open, setOpen] = useState(false);
+  
+  const ModalFunction= (()=>{
+    setOpen(true);
+  })
+
+  const ModalCloseFunc = (()=>{
+    setOpen(false);
+  })
 
   const toggleDropdown = (() => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -20,17 +29,7 @@ const AccountList = () => {
 
   const statusDropdown = (() => {
     setIsActive(!isActive);
-  })
-
-  const [isOpen, setIsOpen] = useState(false)
-
-  const onOpenModal = (() => {
-      setIsOpen(true);
-  })
-
-  const onCloseModal = (() => {
-    setIsOpen(false);
-})
+  });
 
 
   return (
@@ -46,7 +45,7 @@ const AccountList = () => {
               </div>
 
               <div>
-                <button className='create-account' onClick={onOpenModal}><AiOutlinePlus /></button>
+                <button className='create-account' onClick={ModalFunction}><AiOutlinePlus /></button>
               </div>
 
              
@@ -158,7 +157,7 @@ const AccountList = () => {
                 <div className='inner-hy'><p>USD</p></div>
                 <div className='inner-hy'><p>10000</p></div>
                 <div className='inner-hy'><button className='active-btn'>Active</button></div>
-                <div className='inner-hy'><img src='/edit.png' onClick={""} /><img src='/delete.png' onClick={""} /></div>
+                <div className='inner-hy'><img src='/edit.png' onClick={"handleEditClick"} /><img src='/delete.png' onClick={""} /></div>
 
               </div>
 
@@ -168,7 +167,7 @@ const AccountList = () => {
                 <div className='inner-hy'><p>USD</p></div>
                 <div className='inner-hy'><p>10000</p></div>
                 <div className='inner-hy'><button className='active-btn'>Active</button></div>
-                <div className='inner-hy'><img src='/edit.png' onClick={""} /><img src='/delete.png' onClick={""} /></div>
+                <div className='inner-hy'><img src='/edit.png' onClick={"handleEditClick"} /><img src='/delete.png' onClick={"handleEditClick"} /></div>
 
               </div>
 
@@ -179,7 +178,7 @@ const AccountList = () => {
                 <div className='inner-hy'><p>USD</p></div>
                 <div className='inner-hy'><p>10000</p></div>
                 <div className='inner-hy'><button className='active-btn'>Active</button></div>
-                <div className='inner-hy'><img src='/edit.png' onClick={""} /><img src='/delete.png' onClick={""} /></div>
+                <div className='inner-hy'><img src='/edit.png' onClick={"handleEditClick"} /><img src='/delete.png' onClick={"handleEditClick"} /></div>
 
               </div>
 
@@ -189,7 +188,7 @@ const AccountList = () => {
                 <div className='inner-hy'><p>USD</p></div>
                 <div className='inner-hy'><p>10000</p></div>
                 <div className='inner-hy'><button className='active-btn'>Active</button></div>
-                <div className='inner-hy'><img src='/edit.png' onClick={""} /><img src='/delete.png' onClick={""} /></div>
+                <div className='inner-hy'><img src='/edit.png' onClick={"handleEditClick"} /><img src='/delete.png' onClick={"handleEditClick"} /></div>
 
               </div>
               <div className='account-one'>
@@ -198,33 +197,23 @@ const AccountList = () => {
                 <div className='inner-hy'><p>USD</p></div>
                 <div className='inner-hy'><p>10000</p></div>
                 <div className='inner-hy'><button className='active-btn'>Active</button></div>
-                <div className='inner-hy'><img src='/edit.png' onClick={""} /><img src='/delete.png' onClick={""} /></div>
+                <div className='inner-hy'><img src='/edit.png' onClick={"handleEditClick"} /><img src='/delete.png' onClick={"handleEditClick"} /></div>
 
               </div>
+
+            
+              <Pagination className='pagination' count={2} variant="outlined" color='primary' shape="rounded" />
 
             </div>
           </div>
 
-          {isOpen && (
+          <Dialog open={open} fullWidth maxWidth="md">
        <>
-        <div className="modal">
-          <div className="modal-content">
-           
-            <div className='modal-heading'>
-              <div>
-                <h2>Add Account</h2>
-              </div>
-
-              <div>
-                  <span className="close" onClick={onCloseModal}><img src='/disabled_by_default.png'/></span>
-              </div>
-            </div>
+       <div className='modal-heading'> <h2>Add Account</h2> <img src='/disabled_by_default.png' className="modal-close" onClick={ModalCloseFunc}/></div>
        <CreateAccount/>
-
-          </div>
-        </div>
        </>
-      )}
+       
+       </Dialog>
             
         </div>
       </section>

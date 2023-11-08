@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './app.css';
-import { Routes, Route, Link, Outlet } from 'react-router-dom'; // Import Routes and Route
+import { Outlet } from 'react-router-dom';
 import DashboardHeader from '../../components/DashboardHeader';
 import DashboardSidebar from '../../components/DashboardSidebar';
 
@@ -15,10 +15,10 @@ const Dashboard = () => {
   return (
     <>
       <div className="dashboard-section">
-        <DashboardHeader OpenSidebar={OpenSidebar} />
         <div className='sidebar-wrapper'>
           <DashboardSidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} />
         </div>
+        <DashboardHeader OpenSidebar={OpenSidebar} />
         <div className="content-wrapper">
           <Outlet/>
         </div>

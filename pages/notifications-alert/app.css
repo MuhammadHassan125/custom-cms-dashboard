@@ -1,0 +1,32 @@
+.notification-heading{
+    /* display: flex; */
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.notification-inner-hy{
+    width: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.action-btn-main{
+    width: 25%;
+    text-align: right;
+    justify-content: right;
+}
+
+.delete-btn{
+    background-color:#FFF2E8;
+    color: #D4380D;
+    border: 1px solid #FFBB96;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.notification-item{
+    display: flex;
+    justify-content: space-between;
+}

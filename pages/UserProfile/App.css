@@ -1,0 +1,342 @@
+/* Css of UserProfile page  */
+
+.user-profile-section{
+    width: 100%;
+    height: auto;
+    float: left;
+    border: 1px all black;
+    padding: 0 0 0 0;
+
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.user-profile{
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    box-shadow: 5px 5px 8px #b4b0b0;
+    border-radius: 5px;
+    height: auto;
+    padding: 0;
+}
+
+.user-left{
+    width: 27%;
+    border-right: 1px solid black;
+    background-color: white;
+}
+
+.user-right{
+    width: 73%;
+}
+
+.user-sidebar{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.user-topbar{
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.user-topbar-left{
+    width: 80%;
+    display: flex;
+    line-height: 20px;
+    padding: 20px 0;
+
+}
+
+.user-topbar-left p {
+    font-size: 14px;
+    color: #346EFF;
+}
+
+.user-topbar-left h2{
+    font-size: 19px;
+
+}
+
+
+.user-topbar-left img{
+    margin-right: 8px;
+    /* margin-top: -4px; */
+}
+
+
+.user-topbar-right{
+    width: 10%;
+    height: 10%;
+    border-radius: 20px;
+    padding: 8px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.user-topbar-right:hover{
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+.change-photo-dropdown-css{
+    position: absolute;
+    background-color: white;
+    margin-right: 100px;
+    margin-top: 160px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 420%;
+}
+
+.change-photo-dropdown-css ul li{
+    list-style-type: none;
+}
+
+.change-photo-inner-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+
+.change-photo-inner-div:hover{
+    background-color: #D9D9D9;
+    border-radius: 5px;
+}
+
+.change-photo-dropdown-css div > img{
+    margin-top: 3px;
+}
+
+
+.user-sidebar-list{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 8px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.user-sidebar-list:hover{
+    color: #346EFF;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+
+.sidebar-left-icon{
+    display: flex;
+}
+
+
+.icons-user-sidebar{
+    font-size: 25px;
+    margin-right: 10px;
+    margin-top: -3px;
+
+}
+
+.custom-link{
+    text-decoration: none;
+    color: black;
+}
+
+.personal-information{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px 0;
+}
+
+.basic{
+    background-color: #D9D9D9;
+    padding: 5px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.full-name{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+ .content{
+    display: flex;
+    width: 60%;
+    text-align: justify;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.personal-info-content{
+    margin-bottom: 25px;
+}
+
+.switch-div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    margin-right: 20px;
+}
+  /* Hide default checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Slider (round or rectangular) */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+    
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    top: 1px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Checked state */
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+
+  .change-password-main{
+    width: 85%;
+    border: 2px solid #00000080;
+    border-radius: 5px;
+    
+  }
+
+  .change-password {
+    padding: 20px 25px;
+}
+
+  .factor-heading{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
+
+  .factor-heading button{
+    background-color: #01BF87;
+    padding: 6px 18px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+
+.factor-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.factor-content p{
+    width: 80%;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Show modal when it is open */
+  .modal.open {
+    display: block;
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
+
+  .reset-password-close-modal-css{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 30px 20px;
+    cursor: pointer;
+  }

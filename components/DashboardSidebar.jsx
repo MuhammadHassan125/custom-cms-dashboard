@@ -14,7 +14,7 @@ const DashboardSidebar = ({openSidebarToggle, OpenSidebar}) => {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <Link to="/dashboard">
+                <Link to="/dashboard/right-content">
                     <img src='/dashboard.png' className='icon'/> <span>Dashboard</span>
                 </Link>
             </li>
@@ -44,7 +44,7 @@ const DashboardSidebar = ({openSidebarToggle, OpenSidebar}) => {
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="">
+                <Link to="/dashboard/notification-alert">
                     <img src='/alarm.png' className='icon'/> Notification & Alerts
                 </Link>
             </li>
@@ -54,7 +54,7 @@ const DashboardSidebar = ({openSidebarToggle, OpenSidebar}) => {
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="">
+                <Link to="/dashboard/account-balance">
                     <img src='/account_balance.png' className='icon'/> Account balance
                 </Link>
             </li>
@@ -69,7 +69,7 @@ const DashboardSidebar = ({openSidebarToggle, OpenSidebar}) => {
                 </Link>
             </li>
             <li className='sidebar-list-item'>
-                <Link to="">
+                <Link to="/dashboard/log-audit-trail">
                     <img src='/find_in_page.png' className='icon'/> Log & Audit Trail
                 </Link>
             </li>

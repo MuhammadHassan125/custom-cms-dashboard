@@ -119,3 +119,19 @@
   .tab-content .tab-pane.active {
     display: block;
   }
+
+  .btn-continue-primary{
+    background-color: #346EFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+  }
+
+  .btn-continue-primary:hover{
+    background-color: #a0bafc;
+    color: #346EFF;
+    transition: all 0.5 ease-out;
+  }

@@ -8,8 +8,7 @@ body{
     background: #333;
     color: #fff;
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: left 0.8s ease-in-out;
   }
   
   .sidebar.closed {
@@ -46,13 +45,11 @@ body{
 
 .app{
   float: left;
-  background-color: yellow;
   height: 100vh;
 }
 
 .main-wrapper{
   float: left;
-  background-color: green;
 }
 
 .header {
@@ -60,7 +57,8 @@ body{
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-betwe
+    en;
     padding: 0 30px 0 30px;
     box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
   }
@@ -79,14 +77,16 @@ body{
   .content-wrapper{
     width: 78%;
     float: left;
-    background-color: #2962ff;
+    background-color: #F5F6FA;
+
   }
 
   @media only screen and (max-width: 768px) {
     .content-wrapper{
       width: 100%;
       float: left;
-      background-color: green;
+      background-color: #F5F6FA;
+
     }
   }
 
@@ -94,7 +94,8 @@ body{
     .content-wrapper{
       width: 100%;
       float: left;
-      background-color: green;
+      background-color: #F5F6FA;
+
     }
   }
 
@@ -102,14 +103,16 @@ body{
     .content-wrapper{
       width: 78%;
       float: left;
-      background-color: green;
+      background-color: #F5F6FA;
+
     }
   }
 
   @media screen and  (max-width: 480px) {
     .content-wrapper{
       float: left;
-      background-color: green;
+      background-color: #F5F6FA;
+
     }
 
 
@@ -257,8 +260,8 @@ body{
     height: 100%;
     background-color: #263043;
     overflow-y: auto;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
+    /* transition: all 0.5s; */
+    transition: left 0.8s ease-in-out;
   }
   
   .sidebar-title {
@@ -311,13 +314,9 @@ body{
   .sidebar-responsive {
     display: inline !important;
     position: absolute;
-    background-color: #2e7d32;
-    /*
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
     z-index: 12 !important;
+    padding-bottom: 360px;
+
   }
   
   /* End Sidebar  */
@@ -383,5 +382,343 @@ body{
   @media screen and (max-width: 576px) {
     .hedaer-left {
       display: none;
-    }
+    }    
   }
+
+
+  .dashboard-content-section {
+    width: 100%;
+    float: left;
+}
+
+
+  .top-bars-main{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 50px 30px;
+    margin: 0 auto;
+  }
+
+.top-bars-main > div{
+  width: 26%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px 28px;
+  position: relative;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.top-bars-main > div > span{
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: #346EFF;
+  margin-right: 10px;
+}
+
+.top-bars-main > div > img{
+  width: 35px;
+  margin-bottom: 8px;
+}
+
+.bar-chart {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  /* height: 70vh; */
+  border-radius: 10px;
+  padding-top: 45px;
+  display: flex;
+  position: relative;
+}
+
+.line-chart {
+  width: 65%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  /* height: 62vh; */
+  margin-bottom: 30px;
+}
+
+.bar-chart h3{
+    width: 30%;
+    position: absolute;
+    left: 0;
+    margin-left: 35px;
+    margin-top: -28px;
+}
+
+.line-chart-main{
+  width: 100%;
+  display: flex;
+  /* background-color: white; */
+}
+
+.line-chart-main{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.line-chart{
+  width: 65%;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+
+.total-grades {
+    width: 25%;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    padding: 35px 35px;
+}
+
+.total-grades h2 {
+  margin-top: 15px;
+}
+
+.total-grades h1{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #346EFF;
+}
+
+.total-grades > div{
+  display: flex;
+  position: relative;
+}
+
+.total-grades > div > h5{
+  position: absolute;
+  right: 0;
+  top: 5;
+  margin-top: 20px;
+  color: #01BF87;
+  font-size: 20px;
+}
+
+.total-grades > div > span{
+  color: #E4046F;
+  position: absolute;
+  right: 0;
+  top: 5;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.app {
+  float: left;
+  height: auto !important;
+  padding-bottom: 32px;
+}
+
+/* 
+.bar-chart-css{
+  width: 750px;
+  height: 300px;
+} */
+
+
+@media screen and (max-width: 500px) {
+ 
+  .top-bars-main {
+    padding: 40px 0;
+    display: block;
+    justify-content: space-between;
+    width: 90%;
+    padding: 50px 0px;
+    margin: 0 auto;
+}
+
+.top-bars-main > div {
+  width: 85%;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  padding: 30px 28px;
+  position: relative;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.line-chart-main {
+  /* background-color: white; */
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.line-chart {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  justify-content: center;
+}
+
+.total-grades {
+  width: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  padding: 35px 35px;
+}
+
+}
+
+
+@media screen and (min-width: 501px) {
+  
+  .bar-chart-css {
+    width: 450px !important;
+    margin-top: 30px;
+}
+
+.bar-chart h3 {
+  width: 35%;
+  position: absolute;
+  left: 0;
+  margin-left: 35px;
+  margin-top: -28px;
+}
+
+.line-cart-css {
+  width: 450px;
+  margin-top: 20px;
+}
+
+.top-bars-main {
+  display: block;
+}
+
+.top-bars-main {
+  padding: 40px 0;
+  display: block;
+  justify-content: space-between;
+  padding: 50px 0px;
+  margin: 0 auto;
+}
+
+.top-bars-main > div {
+  width: 90%;
+  margin-bottom: 20px !important;
+}
+
+.line-chart-main{
+  display: block;
+}
+
+.line-chart{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.total-grades {
+  width: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 10px;
+  padding: 35px 35px;
+}
+
+
+}
+
+/* 776px ki above ki hy ye */
+@media screen and (min-width: 770px) {
+
+  .top-bars-main{
+    display: flex;
+    position: relative;
+
+  }
+
+  .top-bars-main > div {
+    width: 25%;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+}
+
+.bar-chart-css {
+  width: 700px !important;
+  margin-top: 30px;
+}
+
+.line-cart-css{
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  /* transform: translateX(70px); */
+}
+
+.line-chart-main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.line-chart {
+  width: 60%;
+}
+
+.total-grades {
+  width: 35%;
+  margin-left: 30px;
+  float: right;
+  /* margin-top: 40px; */
+  height: 52vh;
+  /* margin: 0 auto; */
+  /* padding: 30px 35px 41px 35px; */
+}
+
+.total-grades h2{
+  margin-top: 0px;
+}
+
+  .bar-chart > div{
+    width: 50%;
+  }
+
+  .total-grades {
+    width: 30%;
+    /* margin-top: 40px; */
+    height: 52vh;
+    /* margin: 0 auto; */
+    /* padding: 30px 35px 41px 35px; */
+}
+}
+
+@media screen and (min-width: 993px) {
+  .line-cart-css {
+    width: 395px;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* transform: translateX(70px); */
+}
+
+.line-cart-css {
+  width: 395px;
+  margin: 0 auto;
+  margin-top: 30px;
+  /* transform: translateX(70px); */
+  margin-bottom: 21px;
+}
+  
+}
