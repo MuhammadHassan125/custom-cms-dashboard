@@ -2,13 +2,75 @@ body {
   overflow-x: hidden;
 }
 
+body ::-webkit-scrollbar {
+  width: 10px;
+  max-height: 20px !important;
+}
+
 /* here I am styling of dashboard page styling */
+
+
+
+.full-section {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+
+
+.sidebar-wrapper {
+  /* width: 20%; */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1;
+  transition: all ease-in-out;
+  animation-duration: 300;
+}
+
+
+.content-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  transition: all ease-in-out;
+  animation-duration: 300;
+  overflow: auto;
+}
+
+.content-wrapper.close {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  float: right;
+  transition: all ease-in-out;
+  animation-duration: 300;
+}
+
+.menu-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
 .sidebar {
   width: 300px;
-  background: #333;
+  background: #c5bcbc;
   color: #fff;
   padding: 20px;
   transition: left 0.8s ease-in-out;
+  height: 100%;
 }
 
 .sidebar.closed {
@@ -42,6 +104,7 @@ body {
 .dashboard-section {
   width: 100%;
   float: left;
+  height: 100vh;
 }
 
 .app {
@@ -69,11 +132,15 @@ body {
   font-size: 22px;
 }
 
+
 .sidebar-wrapper {
-  width: 22%;
+  /* width: 30%; */
   float: left;
+  height: 100%;
+  background-color: red;
 }
 
+/* 
 .content-wrapper {
   width: 78%;
   float: left;
@@ -116,7 +183,7 @@ body {
   }
 
 
-}
+} */
 
 .header-right {
   display: flex;
@@ -263,10 +330,16 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: #263043;
+  background-color: #101924;
   overflow-y: auto;
   /* transition: all 0.5s; */
   transition: left 0.8s ease-in-out;
+}
+
+#sidebar::-webkit-scrollbar {
+  width: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  height: 10%;
 }
 
 .sidebar-title {
@@ -331,7 +404,6 @@ body {
 .main-container {
   grid-area: main;
   overflow-y: auto;
-  padding: 20px 20px;
   color: rgba(255, 255, 255, 0.95);
 }
 

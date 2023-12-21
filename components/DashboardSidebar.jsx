@@ -1,86 +1,206 @@
-import React from 'react'
- import {AiFillCloseCircle} from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
+import { MdMessage } from "react-icons/md";
+import { BiAnalyse, BiSearch } from "react-icons/bi";
+import { BiCog } from "react-icons/bi";
+import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
+import { BsCartCheck } from "react-icons/bs";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import SidebarMenu from "./SidebarMenu";
+import '../components/Sidebar.css'
+const routes = [
+  {
+    path: "/dsb",
+    name: "Dashboard",
+    icon: <FaHome />,
+  },
+  {
+    path: "/users",
+    name: "Users",
+    icon: <FaUser />,
+  },
+  {
+    path: "/messages",
+    name: "Messages",
+    icon: <MdMessage />,
+  },
+  {
+    path: "/analytics",
+    name: "Analytics",
+    icon: <BiAnalyse />,
+  },
+  {
+    path: "/file-manager",
+    name: "File Manager",
+    icon: <AiTwotoneFileExclamation />,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/order",
+    name: "Order",
+    icon: <BsCartCheck />,
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    icon: <BiCog />,
+    exact: true,
+    subRoutes: [
+      {
+        path: "/settings/profile",
+        name: "Profile ",
+        icon: <FaUser />,
+      },
+      {
+        path: "/settings/2fa",
+        name: "2FA",
+        icon: <FaLock />,
+      },
+      {
+        path: "/settings/billing",
+        name: "Billing",
+        icon: <FaMoneyBill />,
+      },
+    ],
+  },
+  {
+    path: "/saved",
+    name: "Saved",
+    icon: <AiFillHeart />,
+  },
+];
 
-const DashboardSidebar = ({openSidebarToggle, OpenSidebar}) => {
-
-  return (
-    <>
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
-          
-            <span className='icon close_icon' onClick={OpenSidebar}><AiFillCloseCircle/></span>
+const DashboardSidebar = () => {
+    const [isOpen, setIsOpen] = useState(true);
+    const toggle = () => setIsOpen(!isOpen);
+    const inputAnimation = {
+      hidden: {
+        width: 0,
+        padding: 0,
+        transition: {
+          duration: 0.2,
+        },
+      },
+      show: {
+        width: "140px",
+        padding: "5px 15px",
+        transition: {
+          duration: 0.2,
+        },
+      },
+    };
+  
+    const showAnimation = {
+      hidden: {
+        width: 0,
+        opacity: 0,
+        transition: {
+          duration: 0.5,
+        },
+      },
+      show: {
+        opacity: 1,
+        width: "auto",
+        transition: {
+          duration: 0.5,
+        },
+      },
+    };
+  
+    return (
+      <>
+        <div className="main-container">
+          <motion.div
+            animate={{
+              width: isOpen ? "" : "60px",
+  
+              transition: {
+                duration: 0.5,
+                type: "spring",
+                damping: 10,
+              },
+            }}
+            className={`sidebar `}
+          >
+            <div className="top_section">
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.h1
+                    variants={showAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    className="logo"
+                  >
+                    DoSomeCoding
+                  </motion.h1>
+                )}
+              </AnimatePresence>
+  
+              <div className="bars">
+                <FaBars onClick={toggle} />
+              </div>
+            </div>
+            <section className="routes">
+              {routes.map((route, index) => {
+                if (route.subRoutes) {
+                  return (
+                    <SidebarMenu
+                      setIsOpen={setIsOpen}
+                      route={route}
+                      showAnimation={showAnimation}
+                      isOpen={isOpen}
+                    />
+                  );
+                }
+  
+                return (
+                  <NavLink
+                    to={route.path}
+                    key={index}
+                    className="link"
+                    activeClassName="active"
+                  >
+                    <div className="icon">{route.icon}</div>
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          variants={showAnimation}
+                          initial="hidden"
+                          animate="show"
+                          exit="hidden"
+                          className="link_text"
+                        >
+                          {route.name}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </NavLink>
+                );
+              })}
+            </section>
+          </motion.div>
+  
         </div>
-
-        <ul className='sidebar-list'>
-            <li className='sidebar-list-item'>
-                <Link to="/dashboard/right-content">
-                    <img src='/dashboard.png' className='icon'/> <span>Dashboard</span>
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="/dashboard/account-list">
-                    <img src='/account_box.png' className='icon'/> Account Management
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/terminal.png' className='icon'/> Terminal Connection
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/group.png' className='icon'/> User Profile & Settings
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/chart_data.png' className='icon'/> Reporting & Analysis
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/info.png' className='icon'/> Support & Help
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="/dashboard/notification-alert">
-                    <img src='/alarm.png' className='icon'/> Notification & Alerts
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/integration_instructions.png' className='icon'/> Integration & API
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="/dashboard/account-balance">
-                    <img src='/account_balance.png' className='icon'/> Account balance
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/chat.png' className='icon'/> Feedback & Suggestions
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="">
-                    <img src='/shield_person.png' className='icon'/> User Management
-                </Link>
-            </li>
-            <li className='sidebar-list-item'>
-                <Link to="/dashboard/log-audit-trail">
-                    <img src='/find_in_page.png' className='icon'/> Log & Audit Trail
-                </Link>
-            </li>
-        </ul>
-    </aside>
-    </>
-  )
-
-
-
-
+      </>
+    );
 }
 
 export default DashboardSidebar
